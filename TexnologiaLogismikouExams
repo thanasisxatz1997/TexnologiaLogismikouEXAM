@@ -1,5 +1,5 @@
 @TEST
-public class TESTSTRINGTRANSFORM
+public class TESTSTRINGTRANSFORM()
 {
 
 	//Here we test if a sentence with a single space between each word produces the correct result
