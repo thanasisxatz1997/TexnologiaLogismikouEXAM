@@ -1,0 +1,43 @@
+@TEST
+public class TESTSTRINGTRANSFORM
+{
+
+	//Here we test if a sentence with a single space between each word produces the correct result
+	@TEST
+	public static void testIfEqualTransformString()
+	{
+		String testWord= new String();
+		testWord="Hello This Is A Test";
+		assertEquals(StringTransform.transformString(testWord),"hello this is a test");
+	}
+	
+	
+	//Here we test if a sentence with more than one space between each word produces the correct result
+	@TEST
+	public static void testWithExtraSpaces()
+	{
+		String testWord=new String();
+		testWord="This      Is  A  Test    With    Extra  Spaces";
+		assertEquals(StringTransform.transformString(testWord),"this is a test with extra spaces");
+		
+	}
+	
+	//Here we tesst if a word more more than one capital leter in each word produces the correct result
+	@TEST
+	public static void testWithMoreCapsInEachWord()
+	{
+		String testWord=new String();
+		testWord="This worD Has EXtRa CAPS";
+		assertEquals(StringTransform.transformString(testWord),"this word has extra caps");
+	}
+	
+	//Testing if a word with all the above produces the correct result
+	@TEST
+	public static void testComplexWord()
+	{
+		String testWord=new String();
+		testWord="THIS    WorD IS    MorE ComPLEX  a";
+		assertEquals(StringTransform.transformString(testWord),"this word is more complex a");
+	}
+	
+}
